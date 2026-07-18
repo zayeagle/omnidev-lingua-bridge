@@ -1,0 +1,13 @@
+{
+  "interactive_mode": true,
+  "design_split": false,
+  "confirmation_level": "auto",
+  "context_mode": "slim",
+  "sub_agents": "auto",
+  "platform_override": null,
+  "auto_checkpoint": false,
+  "board_ui": true,
+  "board_default_mode": "manual",
+  "deploy_autonomy": "full",
+  "deploy_modes": ["local", "zip", "ci"]
+}

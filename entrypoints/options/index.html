@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="optionsTitle">Lingua Bridge Settings</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <div class="brand">
+          <img class="logo" src="/icon-48.png" width="40" height="40" alt="" />
+          <div>
+            <h1>Lingua Bridge</h1>
+            <p class="tagline" data-i18n="optionsTagline">
+              Scope: Chinese↔English only · works without a key · optional API key
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <form id="form" class="card">
+        <section class="section">
+          <h2 data-i18n="sectionProvider">Provider</h2>
+          <p class="section-desc" data-i18n="sectionProviderDesc">
+            Pick a vendor preset or a custom OpenAI-compatible gateway.
+          </p>
+          <div id="providerGrid" class="provider-grid" role="radiogroup" aria-label="模型供应商"></div>
+          <p id="providerNote" class="callout" hidden></p>
+        </section>
+
+        <section class="section">
+          <h2 data-i18n="sectionCreds">Credentials (optional)</h2>
+          <p class="section-desc" data-i18n="sectionCredsDesc">
+            Key is optional. Without it, free translation works; with a key you get full AI / video SI.
+          </p>
+          <div id="openaiCreds">
+            <div class="field">
+              <label for="apiKey" data-i18n="apiKeyLabel">API Key (optional)</label>
+              <p class="field-desc">供应商密钥。默认明文存本机；开启下方安全加固后将加密存储。</p>
+              <input id="apiKey" type="password" autocomplete="off" spellcheck="false" />
+              <p id="keyHint" class="hint"></p>
+            </div>
+            <div class="field">
+              <label for="baseUrl" data-i18n="baseUrlLabel">Base URL</label>
+              <p class="field-desc">须为 https 的 OpenAI-compatible 端点（Key 会发往该地址）。</p>
+              <input id="baseUrl" type="url" placeholder="https://api.openai.com/v1" />
+              <div id="trustWrap" class="trust" hidden>
+                <label class="check">
+                  <input id="trustAck" type="checkbox" />
+                  我确认该自定义端点可信（API Key 将以 Bearer 发送到该地址）
+                </label>
+              </div>
+            </div>
+          </div>
+          <div id="iflytekCreds" hidden>
+            <fieldset class="field" style="border:0;padding:0;margin:0 0 1rem">
+              <legend class="field-desc" style="padding:0;margin:0 0 0.4rem">能力线路（视频同传）</legend>
+              <label class="check">
+                <input type="radio" name="iflytekPipeline" value="composed" checked />
+                组合线：识别 + 翻译 + 合成（选此项后可改识别/合成产品）
+              </label>
+              <fieldset
+                id="iflytekComposedProducts"
+                class="field"
+                style="border:0;padding:0;margin:0.55rem 0 0.75rem 1.1rem"
+              >
+                <legend class="field-desc" style="padding:0;margin:0 0 0.35rem">
+                  组合线 · 识别 / 合成（仅组合线可选）
+                </legend>
+                <label for="iflytekSttProduct">识别（STT）</label>
+                <p class="field-desc">
+                  默认多语种识别大模型。仅短分片听写/大模型；实时转写、文件转写等暂不支持。
+                </p>
+                <select id="iflytekSttProduct"></select>
+                <p id="iflytekSttHint" class="hint"></p>
+                <label for="iflytekTtsProduct" style="margin-top:0.75rem;display:block">合成（TTS）</label>
+                <p class="field-desc">默认超拟人；也可选在线合成及常用发音人。</p>
+                <select id="iflytekTtsProduct"></select>
+                <p id="iflytekTtsHint" class="hint"></p>
+              </fieldset>
+              <label class="check" style="margin-top:0.15rem">
+                <input type="radio" name="iflytekPipeline" value="simult" />
+                同声传译：控制台「同声传译」一体接口（视频同传走该产品；划词翻译仍用下方 MT）
+              </label>
+              <div id="iflytekMtBlock" class="field" style="margin-top:0.75rem">
+                <label for="iflytekMtProduct">翻译（MT）· 气泡 / 划词 / 整页</label>
+                <p class="field-desc">
+                  默认机器翻译（新）。无论组合线还是同声传译，文本翻译都优先走此处所选供应商产品。
+                </p>
+                <select id="iflytekMtProduct"></select>
+                <p id="iflytekMtHint" class="hint"></p>
+              </div>
+              <p class="hint" style="margin-top:0.5rem">
+                从对应产品页复制 APPID / APIKey / APISecret（勿填 APIPassword）。改密钥后：保存 → 重载扩展 → 刷新页面。
+              </p>
+            </fieldset>
+            <div class="field">
+              <label for="iflytekAppId">APPID</label>
+              <p class="field-desc">讯飞开放平台应用 APPID。</p>
+              <input id="iflytekAppId" type="text" autocomplete="off" spellcheck="false" />
+            </div>
+            <div class="field">
+              <label for="iflytekApiKey">APIKey</label>
+              <p class="field-desc">控制台 APIKey（可加密存储）。</p>
+              <input id="iflytekApiKey" type="password" autocomplete="off" spellcheck="false" />
+              <p id="iflytekKeyHint" class="hint"></p>
+            </div>
+            <div class="field">
+              <label for="iflytekApiSecret">APISecret</label>
+              <p class="field-desc">控制台 APISecret（仅存本机）。</p>
+              <input id="iflytekApiSecret" type="password" autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 data-i18n="sectionSecurity">Security hardening (optional)</h2>
+          <p class="section-desc" data-i18n="sectionSecurityDesc">
+            Off by default. When on, API Key / iFlytek APISecret are AES-GCM encrypted on this device.
+            The passphrase is not stored; unlock once per browser session after restart. Nothing is uploaded.
+          </p>
+          <label class="check hardening-toggle">
+            <input id="hardening" type="checkbox" />
+            <span data-i18n="hardeningEnable"
+              >Enable encrypted storage (unlock required after restart)</span
+            >
+          </label>
+          <div id="hardeningFields" class="hardening-fields" hidden>
+            <div class="field">
+              <label for="passphrase" data-i18n="passphraseLabel">Encryption passphrase</label>
+              <p class="field-desc" data-i18n="passphraseDesc">
+                Enter one or auto-generate. Used only to encrypt/unlock this session; not written to
+                storage. Keep a backup copy.
+              </p>
+              <div class="pass-row">
+                <input
+                  id="passphrase"
+                  type="text"
+                  autocomplete="off"
+                  spellcheck="false"
+                  data-i18n-placeholder="passphrasePlaceholder"
+                  placeholder="Encryption passphrase"
+                />
+                <button type="button" id="genPassphrase" class="btn-secondary" data-i18n="genPassphrase">
+                  Auto-generate
+                </button>
+                <button type="button" id="copyPassphrase" class="btn-ghost" hidden data-i18n="copyPassphrase">
+                  Copy
+                </button>
+              </div>
+              <p id="passGenHint" class="hint" hidden></p>
+            </div>
+            <div id="unlockRow" class="field" hidden>
+              <label for="unlockPass" data-i18n="unlockLabel">Unlock this session</label>
+              <p class="field-desc" data-i18n="unlockDesc">
+                When encrypted credentials exist, enter the passphrase to unlock the current browser
+                session (again after restart).
+              </p>
+              <div class="pass-row">
+                <input
+                  id="unlockPass"
+                  type="password"
+                  autocomplete="off"
+                  data-i18n-placeholder="unlockPlaceholder"
+                  placeholder="Enter passphrase"
+                />
+                <button type="button" id="unlockBtn" class="btn-secondary" data-i18n="unlockBtn">
+                  Unlock session
+                </button>
+              </div>
+            </div>
+            <button type="button" id="clearVault" class="btn-danger-link" hidden data-i18n="clearVault">
+              Clear encrypted keys and disable hardening
+            </button>
+          </div>
+        </section>
+
+        <section class="section" id="modelsSection">
+          <h2 data-i18n="sectionModels">Models</h2>
+          <p class="section-desc" data-i18n="sectionModelsDesc">
+            One field each: pick from suggestions or type a custom model name.
+          </p>
+
+          <div class="field" id="chatField">
+            <label for="chatModel">Chat 模型</label>
+            <p class="field-desc" id="chatHelp"></p>
+            <input id="chatModel" type="text" list="chatModelList" placeholder="选择或填写" spellcheck="false" />
+            <datalist id="chatModelList"></datalist>
+          </div>
+
+          <div class="field" id="sttField">
+            <label for="sttModel">STT 模型</label>
+            <p class="field-desc" id="sttHelp"></p>
+            <input id="sttModel" type="text" list="sttModelList" placeholder="选择或填写" spellcheck="false" />
+            <datalist id="sttModelList"></datalist>
+          </div>
+
+          <div class="field" id="ttsField">
+            <label for="ttsModel">TTS 模型</label>
+            <p class="field-desc" id="ttsHelp"></p>
+            <input id="ttsModel" type="text" list="ttsModelList" placeholder="选择或填写" spellcheck="false" />
+            <datalist id="ttsModelList"></datalist>
+          </div>
+        </section>
+
+        <footer class="form-foot">
+          <p class="hint">语音模式在工具栏弹窗中切换。</p>
+          <button type="submit" class="btn-primary" data-i18n="saveEnable">Save & enable</button>
+        </footer>
+        <p id="msg" class="msg" role="status"></p>
+      </form>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

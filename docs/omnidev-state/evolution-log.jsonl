@@ -1,0 +1,7 @@
+{"ts":"2026-07-18T08:36:00+08:00","phase":0,"source":"phase_0","insight":"Cross-browser EN↔ZH extension: speech/STT path dominates risk; prefer meta-framework over hand-rolled packaging."}
+{"ts":"2026-07-18T08:40:00+08:00","phase":1,"source":"phase_1","insight":"Zero-ops UX: auto ZH/EN detect + viewport translate; speech captions via in-page video capture first."}
+{"ts":"2026-07-18T08:41:00+08:00","phase":2,"source":"phase_2","insight":"Extension INT focuses on content?background messaging; E2E loads unpacked extension with fixture pages."}
+{"ts":"2026-07-18T09:04:00+08:00","phase":5,"source":"phase_5","insight":"Core value prop: in-page auto translate eliminates copy-paste to Baidu/Google Translate."}
+{"ts":"2026-07-18T09:44:00+08:00","phase":3,"type":"insight","text":"Encrypt-at-rest + remembered passphrase enables auto-unlock after browser restart; local threat same as plaintext."}
+{"ts":"2026-07-18T11:33:00+08:00","phase":2,"type":"insight","text":"iFlytek needs HMAC+WSS clients in SW; OpenAI /v1/audio cannot consume xfyun keys."}
+{"ts":"2026-07-18T11:40:00+08:00","phase":3,"type":"insight","text":"iFlytek SI needs content-side PCM16@16k capture; MediaRecorder webm is Whisper-only."}

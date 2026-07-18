@@ -1,0 +1,140 @@
+{
+  "extName": { "message": "Lingua Bridge" },
+  "extDescription": {
+    "message": "仅中英互译。页面自动翻译，并支持静默字幕或语音同声传译。"
+  },
+  "actionTitle": { "message": "Lingua Bridge" },
+
+  "popupSub": { "message": "仅中英互译 · 划词气泡 · 视频同传" },
+  "masterSwitch": { "message": "主开关" },
+  "masterSwitchHint": { "message": "开启后划词出气泡（中↔英）" },
+  "liveStatus": { "message": "实时状态" },
+  "labelMaster": { "message": "主开关" },
+  "labelDirection": { "message": "翻译方向" },
+  "labelProvider": { "message": "供应商" },
+  "labelPipeline": { "message": "能力线路" },
+  "labelSpeechStyle": { "message": "同传样式" },
+  "labelPageSi": { "message": "本页视频同传" },
+  "labelPageVideo": { "message": "本页视频" },
+  "siOutput": { "message": "同传输出" },
+  "siStart": { "message": "开启同传" },
+  "siStop": { "message": "关闭同传" },
+  "foldSiOutput": { "message": "折叠同传输出" },
+  "siModesDesc": {
+    "message": "仅支持中英互译；样式选定后可开本页视频同传"
+  },
+  "modeCaption": { "message": "静默字幕" },
+  "modeCaptionHint": { "message": "同传时叠双语字幕（可拖动 / 历史）" },
+  "modeVoice": { "message": "语音传译" },
+  "modeVoiceHint": { "message": "同传时朗读译文（仍显示字幕）" },
+  "openSettings": { "message": "打开设置" },
+
+  "stateOn": { "message": "已开启" },
+  "stateOff": { "message": "已关闭" },
+  "directionZhEn": { "message": "仅中 ↔ 英（按原文自动）" },
+  "keyConfigured": { "message": " · 已配置密钥" },
+  "keyMissing": { "message": " · 未配置密钥（免费路径）" },
+  "pipelineSimult": { "message": "同声传译（一体线）" },
+  "pipelineComposed": { "message": "组合线（识别+翻译+合成）" },
+  "pipelineNa": { "message": "—（非讯飞）" },
+  "providerIflytek": { "message": "科大讯飞" },
+  "siOnPage": { "message": "已开启（本页）" },
+  "siOffPage": { "message": "未开启" },
+  "siNotConnected": { "message": "未连接页面" },
+  "videoDetected": { "message": "检测到视频" },
+  "videoMissing": { "message": "未检测到视频" },
+  "refreshPageHint": { "message": "请打开普通网页并刷新" },
+  "statusClosed": { "message": "已关闭" },
+  "statusNotConnected": { "message": "未连接当前网页" },
+  "statusSiRunning": { "message": "同传中" },
+  "statusSiIdle": { "message": "同传关" },
+  "statusHasVideo": { "message": "有视频" },
+  "statusNoVideo": { "message": "无视频" },
+  "statusVoiceShort": { "message": "语音" },
+  "statusCaptionShort": { "message": "字幕" },
+  "errEnableMasterFirst": { "message": "请先打开主开关" },
+  "errInjectFailed": {
+    "message": "无法连接本页，请先刷新视频网页再点「开启同传」"
+  },
+  "errSiStartFailed": {
+    "message": "开启同传失败：请确认本页有视频并已刷新"
+  },
+  "errSiStopFailed": { "message": "关闭同传失败" },
+  "siStartedPlay": { "message": "同传已开启 — 请点击播放视频" },
+  "siStartedNoVideo": {
+    "message": "同传已开启 — 本页暂无视频，播放后会自动采音"
+  },
+  "siStopped": { "message": "同传已关闭" },
+
+  "optionsTitle": { "message": "Lingua Bridge 设置" },
+  "optionsTagline": {
+    "message": "定位：仅中英互译 · 无需 Key 也可传译 · API Key 可选增强"
+  },
+  "sectionProvider": { "message": "供应商" },
+  "sectionProviderDesc": {
+    "message": "选择主流厂商预设，或自定义 OpenAI-compatible 网关。"
+  },
+  "sectionCreds": { "message": "凭证（可选）" },
+  "sectionCredsDesc": {
+    "message": "Key 可选。不填可用免费翻译；填写后走供应商 AI（含视频同传）。"
+  },
+  "sectionSecurity": { "message": "安全加固（可选）" },
+  "sectionSecurityDesc": {
+    "message": "默认关。勾选后展开口令设置：API Key / 讯飞 APISecret 以 AES-GCM 加密存本机，口令不会持久化；浏览器重启后需在本页解锁一次，不会上传。"
+  },
+  "hardeningEnable": { "message": "启用加密存储（重启后需解锁）" },
+  "passphraseLabel": { "message": "加密口令" },
+  "passphraseDesc": {
+    "message": "可手填或「自动生成」。口令仅用于加密/解锁本会话，不会写入存储；建议复制备份一份。"
+  },
+  "passphrasePlaceholder": { "message": "加密口令" },
+  "genPassphrase": { "message": "自动生成" },
+  "copyPassphrase": { "message": "复制" },
+  "unlockLabel": { "message": "解锁本会话" },
+  "unlockDesc": {
+    "message": "已有加密凭证时，输入口令解锁当前浏览器会话（重启后需再次解锁）。"
+  },
+  "unlockPlaceholder": { "message": "输入口令" },
+  "unlockBtn": { "message": "解锁本会话" },
+  "clearVault": { "message": "清除加密密钥并关闭加固" },
+  "sectionModels": { "message": "模型" },
+  "sectionModelsDesc": {
+    "message": "单个输入框：可从建议列表选择，也可直接填写自定义模型名。"
+  },
+  "saveEnable": { "message": "保存并启用" },
+  "apiKeyLabel": { "message": "API Key（可选）" },
+  "baseUrlLabel": { "message": "Base URL" },
+
+  "bubbleTranslate": { "message": "翻译" },
+  "bubbleResultTitle": { "message": "译文结果" },
+  "bubbleOriginal": { "message": "原文" },
+  "bubbleTranslated": { "message": "译文" },
+  "bubbleKeywords": { "message": "关键词" },
+  "bubbleFold": { "message": "折叠结果" },
+  "bubbleExpand": { "message": "展开结果" },
+  "bubbleCloseResult": { "message": "关闭结果" },
+  "bubbleExamplePrefix": { "message": "例：" },
+  "bubbleFail": { "message": "翻译失败" },
+  "bubblePageTranslate": { "message": "整页翻译" },
+  "bubblePageTranslateHint": {
+    "message": "翻译当前可视区域（在气泡中选择）"
+  },
+  "bubbleMore": { "message": "更多" },
+  "bubbleClose": { "message": "关闭" },
+  "bubbleSiToggle": { "message": "本页视频同传" },
+  "bubbleSiHint": { "message": "开启 / 关闭本标签页同声传译" },
+  "bubbleSiVideoTitle": { "message": "视频同传" },
+  "bubbleSiMicTitle": { "message": "麦克风 · 同传" },
+  "bubbleSiVideoHint": {
+    "message": "采视频音轨 · 请先播放视频 · 仅本页"
+  },
+  "bubbleSiMicHint": {
+    "message": "麦克风听写 · 仅本页 · 换页需重开"
+  },
+  "bubbleSiTurnOff": { "message": "关闭本页同传" },
+  "bubbleSiTurnOn": { "message": "打开本页同传" },
+
+  "toastPageTranslated": { "message": "已翻译当前可视区域" },
+  "toastPageTranslateFail": { "message": "整页翻译失败" },
+  "toastTranslateFail": { "message": "翻译失败" }
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lingua Bridge</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="head">
+        <img class="logo" src="/icon-32.png" width="28" height="28" alt="" />
+        <div>
+          <h1>Lingua Bridge</h1>
+          <p class="sub" data-i18n="popupSub">Chinese↔English only · selection bubble · video SI</p>
+        </div>
+      </header>
+
+      <label class="switch-row">
+        <span>
+          <strong data-i18n="masterSwitch">Master switch</strong>
+          <small data-i18n="masterSwitchHint">When on, selecting text shows the bubble (ZH↔EN)</small>
+        </span>
+        <input type="checkbox" id="enabled" class="switch" />
+      </label>
+
+      <section
+        class="status-card foldable"
+        data-fold-key="popup.fold.live"
+        aria-labelledby="liveTitle"
+      >
+        <button
+          type="button"
+          class="fold-toggle"
+          aria-expanded="true"
+          aria-controls="liveFoldBody"
+        >
+          <h2 id="liveTitle" class="modes-title" data-i18n="liveStatus">Live status</h2>
+          <span class="fold-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div id="liveFoldBody" class="fold-body">
+          <dl id="liveStatus" class="live">
+            <div><dt data-i18n="labelMaster">Master switch</dt><dd id="stEnabled">—</dd></div>
+            <div><dt data-i18n="labelDirection">Direction</dt><dd id="stLang">—</dd></div>
+            <div><dt data-i18n="labelProvider">Provider</dt><dd id="stProvider">—</dd></div>
+            <div><dt data-i18n="labelPipeline">Capability</dt><dd id="stPipeline">—</dd></div>
+            <div><dt data-i18n="labelSpeechStyle">SI style</dt><dd id="stSpeech">—</dd></div>
+            <div><dt data-i18n="labelPageSi">Video SI on this page</dt><dd id="stSi">—</dd></div>
+            <div><dt data-i18n="labelPageVideo">Video on this page</dt><dd id="stVideo">—</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section
+        class="modes foldable"
+        data-fold-key="popup.fold.si"
+        aria-labelledby="modesTitle"
+      >
+        <div class="modes-head">
+          <h2 id="modesTitle" class="modes-title" data-i18n="siOutput">SI output</h2>
+          <div class="modes-head-actions">
+            <button type="button" id="siToggle" class="si-btn" data-i18n="siStart">Start SI</button>
+            <button
+              type="button"
+              class="fold-toggle fold-toggle-icon"
+              aria-expanded="true"
+              aria-controls="siFoldBody"
+              data-i18n-aria="foldSiOutput"
+              aria-label="Collapse SI output"
+            >
+              <span class="fold-chevron" aria-hidden="true">▾</span>
+            </button>
+          </div>
+        </div>
+        <div id="siFoldBody" class="fold-body">
+          <p class="modes-desc" data-i18n="siModesDesc">
+            Chinese↔English only. Pick a style, then start video SI on this page.
+          </p>
+          <label class="mode">
+            <input type="radio" name="speechMode" value="caption" checked />
+            <span>
+              <strong data-i18n="modeCaption">Silent captions</strong>
+              <small data-i18n="modeCaptionHint"
+                >Overlay bilingual captions during SI (draggable / history)</small
+              >
+            </span>
+          </label>
+          <label class="mode">
+            <input type="radio" name="speechMode" value="voice" />
+            <span>
+              <strong data-i18n="modeVoice">Voice interpretation</strong>
+              <small data-i18n="modeVoiceHint"
+                >Read the translation aloud during SI (captions still shown)</small
+              >
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status"></p>
+      <a id="open-options" class="link" href="#" data-i18n="openSettings">Open settings</a>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

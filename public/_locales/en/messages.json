@@ -1,0 +1,146 @@
+{
+  "extName": { "message": "Lingua Bridge" },
+  "extDescription": {
+    "message": "Chinese↔English only. Auto page translation plus caption or voice simultaneous interpretation."
+  },
+  "actionTitle": { "message": "Lingua Bridge" },
+
+  "popupSub": { "message": "Chinese↔English only · selection bubble · video SI" },
+  "masterSwitch": { "message": "Master switch" },
+  "masterSwitchHint": { "message": "When on, selecting text shows the bubble (ZH↔EN)" },
+  "liveStatus": { "message": "Live status" },
+  "labelMaster": { "message": "Master switch" },
+  "labelDirection": { "message": "Direction" },
+  "labelProvider": { "message": "Provider" },
+  "labelPipeline": { "message": "Capability" },
+  "labelSpeechStyle": { "message": "SI style" },
+  "labelPageSi": { "message": "Video SI on this page" },
+  "labelPageVideo": { "message": "Video on this page" },
+  "siOutput": { "message": "SI output" },
+  "siStart": { "message": "Start SI" },
+  "siStop": { "message": "Stop SI" },
+  "foldSiOutput": { "message": "Collapse SI output" },
+  "siModesDesc": {
+    "message": "Chinese↔English only. Pick a style, then start video SI on this page."
+  },
+  "modeCaption": { "message": "Silent captions" },
+  "modeCaptionHint": {
+    "message": "Overlay bilingual captions during SI (draggable / history)"
+  },
+  "modeVoice": { "message": "Voice interpretation" },
+  "modeVoiceHint": {
+    "message": "Read the translation aloud during SI (captions still shown)"
+  },
+  "openSettings": { "message": "Open settings" },
+
+  "stateOn": { "message": "On" },
+  "stateOff": { "message": "Off" },
+  "directionZhEn": { "message": "ZH ↔ EN only (auto by source)" },
+  "keyConfigured": { "message": " · key configured" },
+  "keyMissing": { "message": " · no key (free path)" },
+  "pipelineSimult": { "message": "Simultaneous interpretation (all-in-one)" },
+  "pipelineComposed": { "message": "Composed (STT + MT + TTS)" },
+  "pipelineNa": { "message": "— (not iFlytek)" },
+  "providerIflytek": { "message": "iFlytek" },
+  "siOnPage": { "message": "On (this page)" },
+  "siOffPage": { "message": "Off" },
+  "siNotConnected": { "message": "Not connected to page" },
+  "videoDetected": { "message": "Video detected" },
+  "videoMissing": { "message": "No video detected" },
+  "refreshPageHint": { "message": "Open a normal webpage and refresh" },
+  "statusClosed": { "message": "Off" },
+  "statusNotConnected": { "message": "Not connected to this page" },
+  "statusSiRunning": { "message": "SI on" },
+  "statusSiIdle": { "message": "SI off" },
+  "statusHasVideo": { "message": "has video" },
+  "statusNoVideo": { "message": "no video" },
+  "statusVoiceShort": { "message": "voice" },
+  "statusCaptionShort": { "message": "captions" },
+  "errEnableMasterFirst": { "message": "Turn on the master switch first" },
+  "errInjectFailed": {
+    "message": "Cannot connect to this page. Refresh the video page, then start SI."
+  },
+  "errSiStartFailed": {
+    "message": "Failed to start SI: confirm this page has a video and was refreshed"
+  },
+  "errSiStopFailed": { "message": "Failed to stop SI" },
+  "siStartedPlay": { "message": "SI on — click play on the video" },
+  "siStartedNoVideo": {
+    "message": "SI on — no video yet; audio capture starts when one plays"
+  },
+  "siStopped": { "message": "SI stopped" },
+
+  "optionsTitle": { "message": "Lingua Bridge Settings" },
+  "optionsTagline": {
+    "message": "Scope: Chinese↔English only · works without a key · optional API key"
+  },
+  "sectionProvider": { "message": "Provider" },
+  "sectionProviderDesc": {
+    "message": "Pick a vendor preset or a custom OpenAI-compatible gateway."
+  },
+  "sectionCreds": { "message": "Credentials (optional)" },
+  "sectionCredsDesc": {
+    "message": "Key is optional. Without it, free translation works; with a key you get full AI / video SI."
+  },
+  "sectionSecurity": { "message": "Security hardening (optional)" },
+  "sectionSecurityDesc": {
+    "message": "Off by default. When on, API Key / iFlytek APISecret are AES-GCM encrypted on this device. The passphrase is not stored; unlock once per browser session after restart. Nothing is uploaded."
+  },
+  "hardeningEnable": {
+    "message": "Enable encrypted storage (unlock required after restart)"
+  },
+  "passphraseLabel": { "message": "Encryption passphrase" },
+  "passphraseDesc": {
+    "message": "Enter one or auto-generate. Used only to encrypt/unlock this session; not written to storage. Keep a backup copy."
+  },
+  "passphrasePlaceholder": { "message": "Encryption passphrase" },
+  "genPassphrase": { "message": "Auto-generate" },
+  "copyPassphrase": { "message": "Copy" },
+  "unlockLabel": { "message": "Unlock this session" },
+  "unlockDesc": {
+    "message": "When encrypted credentials exist, enter the passphrase to unlock the current browser session (again after restart)."
+  },
+  "unlockPlaceholder": { "message": "Enter passphrase" },
+  "unlockBtn": { "message": "Unlock session" },
+  "clearVault": { "message": "Clear encrypted keys and disable hardening" },
+  "sectionModels": { "message": "Models" },
+  "sectionModelsDesc": {
+    "message": "One field each: pick from suggestions or type a custom model name."
+  },
+  "saveEnable": { "message": "Save & enable" },
+  "apiKeyLabel": { "message": "API Key (optional)" },
+  "baseUrlLabel": { "message": "Base URL" },
+
+  "bubbleTranslate": { "message": "Translate" },
+  "bubbleResultTitle": { "message": "Translation" },
+  "bubbleOriginal": { "message": "Original" },
+  "bubbleTranslated": { "message": "Translated" },
+  "bubbleKeywords": { "message": "Keywords" },
+  "bubbleFold": { "message": "Collapse" },
+  "bubbleExpand": { "message": "Expand" },
+  "bubbleCloseResult": { "message": "Close" },
+  "bubbleExamplePrefix": { "message": "e.g. " },
+  "bubbleFail": { "message": "Translation failed" },
+  "bubblePageTranslate": { "message": "Translate page" },
+  "bubblePageTranslateHint": {
+    "message": "Translate the current viewport (from the bubble menu)"
+  },
+  "bubbleMore": { "message": "More" },
+  "bubbleClose": { "message": "Close" },
+  "bubbleSiToggle": { "message": "Video SI on this page" },
+  "bubbleSiHint": { "message": "Start / stop simultaneous interpretation for this tab" },
+  "bubbleSiVideoTitle": { "message": "Video SI" },
+  "bubbleSiMicTitle": { "message": "Mic · SI" },
+  "bubbleSiVideoHint": {
+    "message": "Capture video audio · play the video first · this page only"
+  },
+  "bubbleSiMicHint": {
+    "message": "Mic dictation · this page only · reopen after navigation"
+  },
+  "bubbleSiTurnOff": { "message": "Stop SI on this page" },
+  "bubbleSiTurnOn": { "message": "Start SI on this page" },
+
+  "toastPageTranslated": { "message": "Viewport translated" },
+  "toastPageTranslateFail": { "message": "Page translation failed" },
+  "toastTranslateFail": { "message": "Translation failed" }
+}
